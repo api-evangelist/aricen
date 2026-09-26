@@ -1,23 +1,61 @@
 aid: aricen
+
 name: Aricen
-description: 'Aricen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aricen (Jiangsu Aricen Electronic Materials Co., Ltd.) is a China‑based supplier of high‑purity reagents, gases and one‑stop chemical integration solutions for the electronics industry. The company offers products such as high purity reagents, industrial gases, on‑site gas production, bulk chemistry, and engineering services, serving customers worldwide with continuous innovation and industry expertise.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aricen/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Materials
+- Chemicals
+- Electronics
+- Supplier
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aricen-hosts.yml
+- type: DomainSecurity
+  url: security/aricen-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aricen
+  url: https://www.aricen.cn/en/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/aricen
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
